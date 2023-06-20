@@ -1,0 +1,34 @@
+{
+  "temporary_items":
+  [
+    {
+      "id":40000,
+      "description":
+      {
+        "name":"Test temporary item",
+        "description":"Test temporary_item description text"
+      },
+      "item_info":
+      {
+        "position":13,
+        "min_rank":5,
+        "max_rank":20,
+        "preview_image":"/garage/images/colors/green_preview"
+      },
+      "discount":
+      {
+        "discount":0,
+        "discount_image":"/garage/images/discounts/80"
+      },
+      "temporary_data":
+      {
+        "life_time_in_sec":300,
+        "remaining_time_in_sec":0
+      },
+      "item_category":"plugin",
+      "price":500,
+      "data_owner_id":16,
+      "class_name":"temporary_item_class"
+    }
+  ]
+}

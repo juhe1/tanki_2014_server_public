@@ -1,0 +1,43 @@
+{
+	"maps":
+	[
+		{
+			"map_id":1,
+			"map_xml":"map_arena.xml",
+			"name_en":"Arena",
+			"name_ru":"Арена",
+			"max_people":10,
+			"preview_image":"/battle_list/images/map_previews/arena",
+			"sky_box":"/battle/images/skyboxes/morning_desert",
+			"sky_box_revolution_axis":{"x":0.0, "y":0.0, "z":0.0},
+			"sky_box_revolution_speed":0.0,
+			"map_resource":"/battle_lazy/maps/arena",
+			"environment_sound":"/battle/sounds/environment/default",
+			"graphics_settings":"default",
+			"rank_limit_max":30,
+			"rank_limit_min":0,
+			"theme":"summer",
+			"supported_modes":["dm", "tdm"],
+			"gravity":1000
+		},
+		{
+			"map_id":2,
+			"map_xml":"map_highland.xml",
+			"name_en":"test",
+			"name_ru":"test",
+			"max_people":10,
+			"preview_image":"/battle_list/images/map_previews/arena",
+			"sky_box":"/battle/images/skyboxes/morning_desert",
+			"sky_box_revolution_axis":{"x":0.0, "y":0.0, "z":0.0},
+			"sky_box_revolution_speed":0.0,
+			"map_resource":"/battle_lazy/maps/test",
+			"environment_sound":"/battle/sounds/environment/default",
+			"graphics_settings":"default",
+			"rank_limit_max":30,
+			"rank_limit_min":0,
+			"theme":"summer",
+			"supported_modes":["dm", "tdm"],
+			"gravity":1000
+		}
+	]
+}

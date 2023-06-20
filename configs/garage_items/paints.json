@@ -1,0 +1,55 @@
+{
+  "paint_items":
+  [
+    {
+      "id":100,
+      "description":
+      {
+        "name":"Test paint",
+        "description":"Test paint description text"
+      },
+      "item_info":
+      {
+        "position":14,
+        "min_rank":1,
+        "max_rank":20,
+        "preview_image":"/garage/images/colors/green_preview"
+      },
+      "discount":
+      {
+        "discount":0,
+        "discount_image":"/garage/images/discounts/80"
+      },
+      "modification":
+      {
+        "modification_index":0,
+        "base_item_id":100
+      },
+      "item_category":"color",
+      "price":3892,
+      "data_owner_id":13,
+      "class_name":"paint_item_class",
+      "coloring":"/shared/tank_parts/images/paints/green",
+
+      "properties":
+      [
+        {"final_value":10, "initial_value":2, "item_property":"smoky_resistance", "upgradable_property":"smoky_resistance"}
+      ],
+      "upgradable_property_datas":
+      [
+        {
+          "id":0,
+          "cost":{"initial_number":200, "step":20},
+          "importance":1,
+          "level":0,
+          "max_level":10,
+          "property":"smoky_resistance",
+          "speed_up_discount":1,
+          "time_discount":0,
+          "time_params":{"initial_number":1000, "step":5},
+          "upgrade_discount":1
+        }
+      ]
+    }
+  ]
+}

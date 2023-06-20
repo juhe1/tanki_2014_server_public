@@ -1,0 +1,5 @@
+<library name='Industrial Bridge' resource-id='e01' version='1' />
+<library name='Land Tiles' resource-id='e02' version='1' />
+<library name='Outer Walls' resource-id='e03' version='1' />
+<library name='Promotion' resource-id='e04' version='1' />
+<library name='Waffle Fence' resource-id='e05' version='1' />

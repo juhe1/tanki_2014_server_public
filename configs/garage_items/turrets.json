@@ -1,0 +1,2466 @@
+	
+{
+  "turrets":
+  [
+    {
+      "name":"Smoky",
+      "modifications":
+      [
+        {
+          "id":5,
+
+          "description":
+          {
+            "name":"Smoky",
+            "description":"Smoky description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/smoky/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":2
+          },
+
+          "discrete_shot_data":
+          {
+            "auto_aiming_angle_down":0.9,
+            "auto_aiming_angle_up":0.9
+          },
+
+          "lighting":
+          [
+            {
+              "name": "shot",
+              "records": [
+                { "attenuation_begin": 150, "attenuation_end": 450, "color": "0x00fcdd76", "intensity": 0.9, "time": 0 },
+                { "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fcdd76", "intensity": 0, "time": 300 }
+              ]
+            },
+            {
+              "name": "hit",
+              "records": [
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0.7, "time": 0 },
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0, "time": 400 }
+              ]
+            }
+          ],
+
+          "smoky_sfx_data":
+          {
+            "critical_hit_size":375,
+            "critical_hit_texture":"/battle/multiframe_image/turrets/smoky/m0/critical_hit",
+            "explosion_mark_texture":"/battle/images/turrets/smoky/m0/explosion_mark",
+            "explosion_size":300,
+            "explosion_sound":"/battle/sounds/turrets/smoky/m0/explosion",
+            "explosion_texture":"/battle/multiframe_image/turrets/smoky/m0/explosion",
+            "shot_sound":"/battle/sounds/turrets/smoky/m0/shot",
+            "shot_texture":"/battle/images/turrets/smoky/m0/shot"
+          },
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/smoky/m0",
+          "price":3892,
+          "data_owner_id":1,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":10, "initial_value":5, "item_property":"impact_force", "upgradable_property":"weapon_impact_force"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":0.2, "initial_value":0.1, "item_property":"critical_hit_chance", "upgradable_property":"critical_hit_chance"},
+            {"final_value":1000, "initial_value":500, "item_property":"critical_hit_damage", "upgradable_property":"critical_hit_damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_kickback"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_impact_force",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_chance",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":6,
+
+          "description":
+          {
+            "name":"Smoky",
+            "description":"Smoky description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/smoky/m1"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":1,
+            "base_item_id":2
+          },
+
+          "discrete_shot_data":
+          {
+            "auto_aiming_angle_down":0,
+            "auto_aiming_angle_up":0
+          },
+
+          "lighting":
+          [
+            {
+              "name": "shot",
+              "records": [
+                { "attenuation_begin": 150, "attenuation_end": 450, "color": "0x00fcdd76", "intensity": 0.9, "time": 0 },
+                { "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fcdd76", "intensity": 0, "time": 300 }
+              ]
+            },
+            {
+              "name": "hit",
+              "records": [
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0.7, "time": 0 },
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0, "time": 400 }
+              ]
+            }
+          ],
+
+          "smoky_sfx_data":
+          {
+            "critical_hit_size":375,
+            "critical_hit_texture":"/battle/multiframe_image/turrets/smoky/m0/critical_hit",
+            "explosion_mark_texture":"/battle/images/turrets/smoky/m0/explosion_mark",
+            "explosion_size":300,
+            "explosion_sound":"/battle/sounds/turrets/smoky/m0/explosion",
+            "explosion_texture":"/battle/multiframe_image/turrets/smoky/m0/explosion",
+            "shot_sound":"/battle/sounds/turrets/smoky/m0/shot",
+            "shot_texture":"/battle/images/turrets/smoky/m0/shot"
+          },
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/smoky/m1",
+          "price":3892,
+          "data_owner_id":2,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":10, "initial_value":5, "item_property":"impact_force", "upgradable_property":"weapon_impact_force"},
+            {"final_value":10, "initial_value":5, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"critical_hit_chance"},
+            {"final_value":10, "initial_value":5, "item_property":"critical_hit_damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_kickback"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_impact_force",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_chance",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":7,
+
+          "description":
+          {
+            "name":"Smoky",
+            "description":"Smoky description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/smoky/m2"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":2,
+            "base_item_id":2
+          },
+
+          "discrete_shot_data":
+          {
+            "auto_aiming_angle_down":0,
+            "auto_aiming_angle_up":0
+          },
+
+          "lighting":
+          [
+            {
+              "name": "shot",
+              "records": [
+                { "attenuation_begin": 150, "attenuation_end": 450, "color": "0x00fcdd76", "intensity": 0.9, "time": 0 },
+                { "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fcdd76", "intensity": 0, "time": 300 }
+              ]
+            },
+            {
+              "name": "hit",
+              "records": [
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0.7, "time": 0 },
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0, "time": 400 }
+              ]
+            }
+          ],
+
+          "smoky_sfx_data":
+          {
+            "critical_hit_size":375,
+            "critical_hit_texture":"/battle/multiframe_image/turrets/smoky/m0/critical_hit",
+            "explosion_mark_texture":"/battle/images/turrets/smoky/m0/explosion_mark",
+            "explosion_size":300,
+            "explosion_sound":"/battle/sounds/turrets/smoky/m0/explosion",
+            "explosion_texture":"/battle/multiframe_image/turrets/smoky/m0/explosion",
+            "shot_sound":"/battle/sounds/turrets/smoky/m0/shot",
+            "shot_texture":"/battle/images/turrets/smoky/m0/shot"
+          },
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/smoky/m2",
+          "price":3892,
+          "data_owner_id":3,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":10, "initial_value":5, "item_property":"impact_force", "upgradable_property":"weapon_impact_force"},
+            {"final_value":10, "initial_value":5, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"critical_hit_chance"},
+            {"final_value":10, "initial_value":5, "item_property":"critical_hit_damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_kickback"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_impact_force",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_chance",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":8,
+
+          "description":
+          {
+            "name":"Smoky",
+            "description":"Smoky description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/smoky/m3"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":3,
+            "base_item_id":2
+          },
+
+          "discrete_shot_data":
+          {
+            "auto_aiming_angle_down":0,
+            "auto_aiming_angle_up":0
+          },
+
+          "lighting":
+          [
+            {
+              "name": "shot",
+              "records": [
+                { "attenuation_begin": 150, "attenuation_end": 450, "color": "0x00fcdd76", "intensity": 0.9, "time": 0 },
+                { "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fcdd76", "intensity": 0, "time": 300 }
+              ]
+            },
+            {
+              "name": "hit",
+              "records": [
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0.7, "time": 0 },
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0, "time": 400 }
+              ]
+            }
+          ],
+
+          "smoky_sfx_data":
+          {
+            "critical_hit_size":375,
+            "critical_hit_texture":"/battle/multiframe_image/turrets/smoky/m0/critical_hit",
+            "explosion_mark_texture":"/battle/images/turrets/smoky/m0/explosion_mark",
+            "explosion_size":300,
+            "explosion_sound":"/battle/sounds/turrets/smoky/m0/explosion",
+            "explosion_texture":"/battle/multiframe_image/turrets/smoky/m0/explosion",
+            "shot_sound":"/battle/sounds/turrets/smoky/m0/shot",
+            "shot_texture":"/battle/images/turrets/smoky/m0/shot"
+          },
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/smoky/m3",
+          "price":3892,
+          "data_owner_id":4,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":10, "initial_value":5, "item_property":"impact_force", "upgradable_property":"weapon_impact_force"},
+            {"final_value":10, "initial_value":5, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"critical_hit_chance"},
+            {"final_value":10, "initial_value":5, "item_property":"critical_hit_damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_kickback"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_impact_force",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_chance",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"critical_hit_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Shaft",
+      "modifications":
+      [
+        {
+          "id":679,
+
+          "description":
+          {
+            "name":"Shaft",
+            "description":"Shaft description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/shaft/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":679
+          },
+
+          "discrete_shot_data":
+          {
+            "auto_aiming_angle_down":0.2618,
+            "auto_aiming_angle_up":0.209
+          },
+
+          "lighting":
+          [
+            {
+              "name": "shot",
+              "records": [
+                { "attenuation_begin": 150, "attenuation_end": 450, "color": "0x00fcdd76", "intensity": 0.9, "time": 0 },
+                { "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fcdd76", "intensity": 0, "time": 300 }
+              ]
+            },
+            {
+              "name": "hit",
+              "records": [
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0.7, "time": 0 },
+                { "attenuation_begin": 100, "attenuation_end": 300, "color": "0x00ffbf00", "intensity": 0, "time": 400 }
+              ]
+            }
+          ],
+
+					"bcsh":
+					[
+						{"brightness":0, "contrast":0, "saturation":0, "hue":0, "key":"def"}
+					],
+
+					"shaft_sfx_data":
+					{
+						"explosion_sound":"/battle/sounds/turrets/shaft/m0/explosion",
+						"explosion_texture":"/battle/multiframe_image/turrets/shaft/m0/explosion",
+						"hit_mark_texture":"/battle/images/turrets/shaft/m0/explosion_mark",
+						"muzzle_flash_texture":"/battle/multiframe_image/turrets/shaft/m0/muzzle_flash",
+						"shot_sound":"/battle/sounds/turrets/shaft/m0/shot",
+						"targeting_sound":"/battle/sounds/turrets/shaft/m0/targeting",
+						"trail_texture":"/battle/images/turrets/shaft/m0/trail",
+						"zoom_mode_sound":"/battle/sounds/turrets/shaft/m0/scope"
+					},
+
+					"shaft_data":
+					{
+						"after_shot_pause":500,
+						"fast_shot_energy":1000,
+						"initial_fov":0.6981,
+						"minimum_fov":0.4014,
+						"jitter_angle_max":0.00698,
+						"jitter_angle_min":0,
+						"jitter_intencity_max":0.01,
+						"jitter_intencity_min":0,
+						"jitter_start_point":0,
+						"max_energy":1000,
+						"reticle_image":"/battle/images/turrets/shaft/m0/reticle",
+						"shrubs_hiding_radius_max":80,
+						"shrubs_hiding_radius_min":20,
+						"targeting_acceleration":0.47,
+						"targeting_transition_time":500,
+						"weakening_coeff":0.24
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/shaft/m0",
+          "price":3892,
+          "data_owner_id":23453,
+
+          "properties":
+          [
+            {"final_value":2.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":2000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":10, "initial_value":5, "item_property":"impact_force", "upgradable_property":"weapon_impact_force"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_from", "upgradable_property":"shaft_arcade_damage"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_to", "upgradable_property":"shaft_arcade_damage"},
+            {"final_value":500, "initial_value":200, "item_property":"shaft_aimed_shot_impact", "upgradable_property":"weapon_impact_force"},
+            {"final_value":200, "initial_value":50, "item_property":"shaft_aiming_mode_min_damage", "upgradable_property":"aiming_mode_damage"},
+            {"final_value":500, "initial_value":200, "item_property":"shaft_aiming_mode_max_damage", "upgradable_property":"aiming_mode_damage"},
+            {"final_value":0.133, "initial_value":0.107, "item_property":"shaft_vertical_targeting_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":0.266, "initial_value":0.215, "item_property":"shaft_horizontal_targeting_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":10, "initial_value":5, "item_property":"shaft_rotation_deceleration_coeff", "upgradable_property":"turret_turn_speed"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration", "upgradable_property":"turret_turn_speed"},
+            {"final_value":286, "initial_value":277, "item_property":"shaft_aiming_mode_charge_rate", "upgradable_property":"weapon_charge_rate"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_kickback"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_impact_force",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"aiming_mode_damage",
+              "properties":["shaft_aiming_mode_min_damage", "shaft_aiming_mode_max_damage"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"shaft_arcade_damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Firebird",
+      "modifications":
+      [
+        {
+          "id":690,
+
+          "description":
+          {
+            "name":"Firebird",
+            "description":"Firebird description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/firebird/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":690
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color":"0x00ff8800", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color":"0x00ff8800", "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": "0x00ff8800", "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": "0x00ff8800", "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x00ff8800", "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": "0x00ff8800", "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": "0x00ff8800", "intensity": 1, "time": 400 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00ff8800", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": "0x00ff8800", "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": "0x00ff8800", "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": "0x00ff8800", "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color":"0x00ff8800", "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": "0x00ff8800", "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": "0x00ff8800", "intensity": 1, "time": 400 }
+							]
+						}
+					],
+
+					"color_transform": [
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 150, "blueOffset": 100, "alphaOffset": 0,
+							"t": 0
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 100, "blueOffset": 60, "alphaOffset": 0,
+							"t": 0.05
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 100, "blueOffset": 40, "alphaOffset": 0,
+							"t": 0.1
+						},
+						{
+							"redMultiplier": 0.5, "greenMultiplier": 0.3, "blueMultiplier": 0.3, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 80, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.65
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 50, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.75
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 0,
+							"redOffset": 20, "greenOffset": 20, "blueOffset": 20, "alphaOffset": 0,
+							"t": 1
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":500,
+						"energy_capacity":1000
+					},
+
+					"flame_thrower_sfx_data":
+					{
+						"fire_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/fire",
+						"flame_sound":"/battle/sounds/turrets/flame_thrower/m0/flame",
+						"muzzle_plane_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/muzzle_plane"
+					},
+
+					"flame_thrower_data":
+					{
+						"cone_angle":0.7,
+						"heating_rate":0.025,
+						"cooling_rate":0.016,
+						"burn_damage_min":3,
+						"burn_damage_max":6
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/firebird/m0",
+          "price":3892,
+          "data_owner_id":23454,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":60, "initial_value":100, "item_property":"weapon_discharge_rate"},
+            {"final_value":0.2853, "initial_value":0.1, "item_property":"flame_temperature_limit", "upgradable_property":"fire_damage"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"fire_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":691,
+
+          "description":
+          {
+            "name":"Firebird",
+            "description":"Firebird description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/firebird/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":1,
+            "base_item_id":690
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": 16746496, "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": 16746496, "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 400 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": 16746496, "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": 16746496, "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 400 }
+							]
+						}
+					],
+
+					"color_transform": [
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 150, "blueOffset": 100, "alphaOffset": 0,
+							"t": 0
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 100, "blueOffset": 60, "alphaOffset": 0,
+							"t": 0.05
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 100, "blueOffset": 40, "alphaOffset": 0,
+							"t": 0.1
+						},
+						{
+							"redMultiplier": 0.5, "greenMultiplier": 0.3, "blueMultiplier": 0.3, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 80, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.65
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 50, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.75
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 0,
+							"redOffset": 20, "greenOffset": 20, "blueOffset": 20, "alphaOffset": 0,
+							"t": 1
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":1000,
+						"energy_capacity":1000
+					},
+
+					"flame_thrower_sfx_data":
+					{
+						"fire_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/fire",
+						"flame_sound":"/battle/sounds/turrets/flame_thrower/m0/flame",
+						"muzzle_plane_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/muzzle_plane"
+					},
+
+					"flame_thrower_data":
+					{
+						"cone_angle":0.7,
+						"heating_rate":0.025,
+						"cooling_rate":0.016,
+						"burn_damage_min":1,
+						"burn_damage_max":10
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/firebird/m0",
+          "price":3892,
+          "data_owner_id":230454,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_discharge_rate"},
+            {"final_value":10, "initial_value":5, "item_property":"flame_temperature_limit", "upgradable_property":"fire_damage"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"fire_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":692,
+
+          "description":
+          {
+            "name":"Firebird",
+            "description":"Firebird description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/firebird/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":2,
+            "base_item_id":690
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": 16746496, "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": 16746496, "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 400 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": 16746496, "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": 16746496, "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 400 }
+							]
+						}
+					],
+
+					"color_transform": [
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 150, "blueOffset": 100, "alphaOffset": 0,
+							"t": 0
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 100, "blueOffset": 60, "alphaOffset": 0,
+							"t": 0.05
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 100, "blueOffset": 40, "alphaOffset": 0,
+							"t": 0.1
+						},
+						{
+							"redMultiplier": 0.5, "greenMultiplier": 0.3, "blueMultiplier": 0.3, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 80, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.65
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 50, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.75
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 0,
+							"redOffset": 20, "greenOffset": 20, "blueOffset": 20, "alphaOffset": 0,
+							"t": 1
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":1000,
+						"energy_capacity":1000
+					},
+
+					"flame_thrower_sfx_data":
+					{
+						"fire_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/fire",
+						"flame_sound":"/battle/sounds/turrets/flame_thrower/m0/flame",
+						"muzzle_plane_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/muzzle_plane"
+					},
+
+					"flame_thrower_data":
+					{
+						"cone_angle":0.7,
+						"heating_rate":0.025,
+						"cooling_rate":0.016,
+						"burn_damage_min":1,
+						"burn_damage_max":10
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/firebird/m0",
+          "price":3892,
+          "data_owner_id":2543213,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_discharge_rate"},
+            {"final_value":10, "initial_value":5, "item_property":"flame_temperature_limit", "upgradable_property":"fire_damage"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"fire_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":693,
+
+          "description":
+          {
+            "name":"Firebird",
+            "description":"Firebird description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/firebird/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":3,
+            "base_item_id":690
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": 16746496, "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": 16746496, "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 400 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": 16746496, "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 100 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": 16746496, "intensity": 1, "time": 200 },
+								{ "attenuation_begin": 150, "attenuation_end": 800, "color": 16746496, "intensity": 1, "time": 300 },
+								{ "attenuation_begin": 50, "attenuation_end": 1000, "color": 16746496, "intensity": 1, "time": 400 }
+							]
+						}
+					],
+
+					"color_transform": [
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 150, "blueOffset": 100, "alphaOffset": 0,
+							"t": 0
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 100, "blueOffset": 60, "alphaOffset": 0,
+							"t": 0.05
+						},
+						{
+							"redMultiplier": 1, "greenMultiplier": 1, "blueMultiplier": 1, "alphaMultiplier": 1,
+							"redOffset": 100, "greenOffset": 100, "blueOffset": 40, "alphaOffset": 0,
+							"t": 0.1
+						},
+						{
+							"redMultiplier": 0.5, "greenMultiplier": 0.3, "blueMultiplier": 0.3, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 80, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.65
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 1,
+							"redOffset": 50, "greenOffset": 50, "blueOffset": 50, "alphaOffset": 0,
+							"t": 0.75
+						},
+						{
+							"redMultiplier": 0, "greenMultiplier": 0, "blueMultiplier": 0, "alphaMultiplier": 0,
+							"redOffset": 20, "greenOffset": 20, "blueOffset": 20, "alphaOffset": 0,
+							"t": 1
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":1000,
+						"energy_capacity":1000
+					},
+
+					"flame_thrower_sfx_data":
+					{
+						"fire_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/fire",
+						"flame_sound":"/battle/sounds/turrets/flame_thrower/m0/flame",
+						"muzzle_plane_texture":"/battle/multiframe_image/turrets/flame_thrower/m0/muzzle_plane"
+					},
+
+					"flame_thrower_data":
+					{
+						"cone_angle":0.7,
+						"heating_rate":0.025,
+						"cooling_rate":0.016,
+						"burn_damage_min":1,
+						"burn_damage_max":10
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/firebird/m0",
+          "price":3892,
+          "data_owner_id":232464,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1000, "initial_value":1000, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":200, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_discharge_rate"},
+            {"final_value":10, "initial_value":5, "item_property":"flame_temperature_limit", "upgradable_property":"fire_damage"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"fire_damage",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Freeze",
+      "modifications":
+      [
+        {
+          "id":700,
+
+          "description":
+          {
+            "name":"Freeze",
+            "description":"Freeze description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/freeze/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":700
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color":"0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color":"0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":500,
+						"energy_capacity":1000
+					},
+
+					"freeze_sfx_data":
+					{
+						"particle_speed":3000,
+						"particle_texture":"/battle/multiframe_image/turrets/freeze/m0/particle",
+						"plane_texture":"/battle/multiframe_image/turrets/freeze/m0/plane",
+						"shot_sound":"/battle/sounds/turrets/freeze/m0/shot"
+					},
+
+					"freeze_data":
+					{
+						"cone_angle":0.7,
+						"freezing_speed":0.8,
+						"defrosting_speed":0.3,
+						"turret_max_freezing":0.1,
+						"body_max_freezing":0.1,
+						"min_temperature":-5
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/freeze/m0",
+          "price":3892,
+          "data_owner_id":2393004,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":60, "initial_value":100, "item_property":"weapon_discharge_rate"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":701,
+
+          "description":
+          {
+            "name":"Freeze",
+            "description":"Freeze description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/freeze/m1"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":1,
+            "base_item_id":700
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color":"0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color":"0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":500,
+						"energy_capacity":1000
+					},
+
+					"freeze_sfx_data":
+					{
+						"particle_speed":3000,
+						"particle_texture":"/battle/multiframe_image/turrets/freeze/m1/particle_texture",
+						"plane_texture":"/battle/multiframe_image/turrets/freeze/m1/plane_texture",
+						"shot_sound":"/battle/sounds/turrets/freeze/m1/shot_sound"
+					},
+
+					"freeze_data":
+					{
+						"cone_angle":0.7,
+						"freezing_speed":0.8,
+						"defrosting_speed":0.3,
+						"turret_max_freezing":0.1,
+						"body_max_freezing":0.1,
+						"min_temperature":-5
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/freeze/m1",
+          "price":3892,
+          "data_owner_id":45693004,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":60, "initial_value":100, "item_property":"weapon_discharge_rate"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":702,
+
+          "description":
+          {
+            "name":"Freeze",
+            "description":"Freeze description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/freeze/m1"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":2,
+            "base_item_id":700
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color":"0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color":"0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":500,
+						"energy_capacity":1000
+					},
+
+					"freeze_sfx_data":
+					{
+						"particle_speed":3000,
+						"particle_texture":"/battle/multiframe_image/turrets/freeze/m0/particle_texture",
+						"plane_texture":"/battle/multiframe_image/turrets/freeze/m0/plane_texture",
+						"shot_sound":"/battle/sounds/turrets/freeze/m0/shot_sound"
+					},
+
+					"freeze_data":
+					{
+						"cone_angle":0.7,
+						"freezing_speed":0.8,
+						"defrosting_speed":0.3,
+						"turret_max_freezing":0.1,
+						"body_max_freezing":0.1,
+						"min_temperature":-5
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/freeze/m2",
+          "price":3892,
+          "data_owner_id":98533004,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":60, "initial_value":100, "item_property":"weapon_discharge_rate"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":703,
+
+          "description":
+          {
+            "name":"Freeze",
+            "description":"Freeze description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/freeze/m3"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":3,
+            "base_item_id":700
+          },
+
+					"lighting": [
+						{
+							"name": "start",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color":"0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color":"0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						},
+						{
+							"name": "startFire",
+							"records": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x0000ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 200 }
+							]
+						},
+						{
+							"name": "loopFire",
+							"records": [
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 200 },
+								{ "attenuation_begin": 100, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 400 },
+								{ "attenuation_begin": 150, "attenuation_end": 1000, "color": "0x0000ffff", "intensity": 0.3, "time": 600 },
+								{ "attenuation_begin": 50, "attenuation_end": 1500, "color": "0x0000ffff", "intensity": 0.3, "time": 800 }
+							]
+						}
+					],
+
+					"stream_weapon_data":
+					{
+						"weapon_tick_interval_msec":500,
+						"energy_capacity":1000
+					},
+
+					"freeze_sfx_data":
+					{
+						"particle_speed":3000,
+						"particle_texture":"/battle/multiframe_image/turrets/freeze/m0/particle_texture",
+						"plane_texture":"/battle/multiframe_image/turrets/freeze/m0/plane_texture",
+						"shot_sound":"/battle/sounds/turrets/freeze/m0/shot_sound"
+					},
+
+					"freeze_data":
+					{
+						"cone_angle":0.7,
+						"freezing_speed":0.8,
+						"defrosting_speed":0.3,
+						"turret_max_freezing":0.1,
+						"body_max_freezing":0.1,
+						"min_temperature":-5
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/freeze/m3",
+          "price":3892,
+          "data_owner_id":59932004,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_percent"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_min_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"weapon_max_damage_radius", "upgradable_property":"shot_range"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"},
+            {"final_value":60, "initial_value":100, "item_property":"weapon_discharge_rate"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"shot_range",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+      ]
+    }.
+    {
+      "name":"Isida",
+      "modifications":
+      [
+        {
+          "id":730,
+
+          "description":
+          {
+            "name":"Isida",
+            "description":"Isida description text"
+          },
+
+          "item_info":
+          {
+            "position":0,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/turrets/isis/m0"
+          },
+
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":700
+          },
+
+					"lighting": [
+						{
+							"name": "enemyStart",
+							"light": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fde910", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.1, "time": 200 }
+							]
+						},
+						{
+							"name": "enemyLoop",
+							"light": [
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x00fde910", "intensity": 0.2, "time": 200 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.3, "time": 400 }
+							]
+						},
+						{
+							"name": "start",
+							"light": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x0041beeb", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x0041beeb", "intensity": 0.2, "time": 200 }
+							]
+						},
+						{
+							"name": "loop",
+							"light": [
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x0041beeb", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x0041beeb", "intensity": 0.2, "time": 200 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x0041beeb", "intensity": 0.3, "time": 400 }
+							]
+						},
+						{
+							"name": "friendStart",
+							"light": [
+								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00ffff", "intensity": 0, "time": 0 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00ffff", "intensity": 0.2, "time": 200 }
+							]
+						},
+						{
+							"name": "friendLoop",
+							"light": [
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.3, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x007df9ff", "intensity": 0.2, "time": 200 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.3, "time": 400 }
+							]
+						},
+						{
+							"name": "enemyBeam",
+							"light": [
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.2, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x00fde910", "intensity": 0.15, "time": 200 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.2, "time": 400 }
+							]
+						},
+						{
+							"name": "friendBeam",
+							"light": [
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.2, "time": 0 },
+								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x007df9ff", "intensity": 0.15, "time": 200 },
+								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.2, "time": 400 }
+							]
+						}
+					],
+
+					"bcsh": 
+					[
+						{ "brightness": 0, "contrast": -1.77, "saturation": 0, "hue": 0, "key": "hss" },
+						{ "brightness": 0, "contrast": -1.77, "saturation": 0, "hue": 0, "key": "hs" },
+						{ "brightness": 22.566, "contrast": -2.655, "saturation": 0, "hue": 15.93, "key": "dss" },
+						{ "brightness": 22.566, "contrast": -2.655, "saturation": 0, "hue": 15.93, "key": "ds" }
+					],
+
+					"isis_sfx_data":
+					{
+						"damaging_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"damaging_sound":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"damaging_target_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"damaging_weapon_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"healing_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"healing_target_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"healing_weapon_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"idle_weapon_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"damaging_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx",
+						"damaging_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx"
+					},
+
+					"isis_data":
+					{
+						"healing_angle":0.7854,
+						"capacity":1000,
+						"weapon_tick_interval_msec":500,
+						"cone_angle":0.5236,
+						"discharge_rate":166,
+						"range":15
+					},
+
+          "item_category":"weapon",
+          "object_3ds":"/shared/tank_parts/3ds/turrets/isis/m0",
+          "price":3892,
+          "data_owner_id":2393004,
+
+          "properties":
+          [
+            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
+            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
+            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
+            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
+            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"turret_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"damage",
+              "properties":["damage_from", "damage_to"],
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"weapon_cooldown_time",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+			]
+		}
+  ]
+}

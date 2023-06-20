@@ -1,0 +1,7 @@
+{
+	"exclude": [
+		"notes/*",
+		"configs/*",
+		"client_files/*"
+	]
+}

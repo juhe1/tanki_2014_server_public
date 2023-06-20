@@ -1,0 +1,914 @@
+{
+  "hulls":
+  [
+    {
+      "name":"Hunter",
+      "modifications":
+      [
+        {
+          "id":1,
+          "description":
+          {
+            "name":"Hunter",
+            "description":"Hunter description text"
+          },
+          "item_info":
+          {
+            "position":4,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hunter/m0"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":1
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hunter/m0",
+          "price":3892,
+          "data_owner_id":5,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":330, "y":520, "z":150}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":50, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":20, "initial_value":15, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":10,
+              "time_discount":0,
+              "time_params":{"initial_number":1, "step":0},
+              "upgrade_discount":10
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":2,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1, "step":0},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":3,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1, "step":0},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":4,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1, "step":0},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":5,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1, "step":0},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":2,
+          "description":
+          {
+            "name":"Hunter",
+            "description":"Hunter description text"
+          },
+          "item_info":
+          {
+            "position":5,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hunter/m1"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":1,
+            "base_item_id":1
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hunter/m1",
+          "price":3892,
+          "data_owner_id":6,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":330, "y":520, "z":150}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":3,
+          "description":
+          {
+            "name":"Hunter",
+            "description":"Hunter description text"
+          },
+          "item_info":
+          {
+            "position":6,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hunter/m2"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":2,
+            "base_item_id":1
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hunter/m2",
+          "price":3892,
+          "data_owner_id":7,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":330, "y":520, "z":150}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":4,
+          "description":
+          {
+            "name":"Hunter",
+            "description":"Hunter description text"
+          },
+          "item_info":
+          {
+            "position":7,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hunter/m3"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":3,
+            "base_item_id":1
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hunter/m3",
+          "price":3892,
+          "data_owner_id":8,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":330, "y":520, "z":150}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name":"Hornet",
+      "modifications":
+      [
+        {
+          "id":9,
+          "description":
+          {
+            "name":"Hornet",
+            "description":"Hornet description text"
+          },
+          "item_info":
+          {
+            "position":8,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hornet/m0"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":0,
+            "base_item_id":3
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hornet/m0",
+          "price":3892,
+          "data_owner_id":9,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":130, "y":210, "z":50}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":0,
+              "time_discount":0,
+              "time_params":{"initial_number":1, "step":1},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":2, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":10,
+          "description":
+          {
+            "name":"Hornet",
+            "description":"Hornet description text"
+          },
+          "item_info":
+          {
+            "position":9,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hornet/m1"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":1,
+            "base_item_id":3
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hornet/m1",
+          "price":3892,
+          "data_owner_id":10,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":130, "y":210, "z":50}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":11,
+          "description":
+          {
+            "name":"Hornet",
+            "description":"Hornet description text"
+          },
+          "item_info":
+          {
+            "position":10,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hornet/m2"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":2,
+            "base_item_id":3
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hornet/m2",
+          "price":3892,
+          "data_owner_id":11,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":130, "y":210, "z":50}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":20},
+              "upgrade_discount":1
+            }
+          ]
+        },
+        {
+          "id":12,
+          "description":
+          {
+            "name":"Hornet",
+            "description":"Hornet description text"
+          },
+          "item_info":
+          {
+            "position":11,
+            "min_rank":1,
+            "max_rank":20,
+            "preview_image":"/garage/images/hulls/hornet/m3"
+          },
+          "discount":
+          {
+            "discount":0,
+            "discount_image":"/garage/images/discounts/80"
+          },
+          "modification":
+          {
+            "modification_index":3,
+            "base_item_id":3
+          },
+          "item_category":"armor",
+          "object_3ds":"/shared/tank_parts/3ds/hulls/hornet/m3",
+          "price":3892,
+          "data_owner_id":12,
+          "class_name":"hull_and_turret_class",
+
+          "tank_physics":
+          {
+            "hull_side_acceleration":8,
+            "hull_turn_acceleration":2.9670596,
+            "hull_reverse_turn_acceleration":5.5850534,
+            "hull_reverse_acceleration":23.0,
+            "hull_damping":1250,
+			"hull_size":{"x":130, "y":210, "z":50}
+          },
+
+          "properties":
+          [
+            {"final_value":100, "initial_value":2, "item_property":"hull_armor", "upgradable_property":"hull_armor"},
+            {"final_value":100, "initial_value":24, "item_property":"hull_speed", "upgradable_property":"hull_speed"},
+            {"final_value":100, "initial_value":2.268928, "item_property":"hull_turn_speed", "upgradable_property":"hull_turn_speed"},
+            {"final_value":2400, "initial_value":2400, "item_property":"hull_mass", "upgradable_property":"hull_mass"},
+            {"final_value":100, "initial_value":14, "item_property":"hull_acceleration", "upgradable_property":"hull_power"}
+          ],
+          "upgradable_property_datas":
+          [
+            {
+              "id":0,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_armor",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":1,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":2,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_turn_speed",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":3,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_mass",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            },
+            {
+              "id":4,
+              "cost":{"initial_number":200, "step":20},
+              "importance":1,
+              "level":0,
+              "max_level":10,
+              "property":"hull_power",
+              "speed_up_discount":1,
+              "time_discount":0,
+              "time_params":{"initial_number":1000, "step":5},
+              "upgrade_discount":1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

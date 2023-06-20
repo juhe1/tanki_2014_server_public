@@ -1,0 +1,30 @@
+{
+  "name":"default",
+  "ssao_color":"0x002e2920",
+
+  "dust_params":
+  {
+    "alpha":0.75,
+    "density":0.15000000596046448,
+    "dust_far_distance":7000,
+    "dust_near_distance":5000,
+    "dust_particle":"/battle/multiframe_image/dust",
+    "dust_size":200
+  },
+
+  "dynamic_shadow_params":
+  {
+    "angle_x":-1,
+    "angle_y":-0.5,
+    "light_color":"0x00c7bdab",
+    "shadow_color":"0x0054646f"
+  },
+
+  "fog_params":
+  {
+    "alpha":0.25,
+    "color":"0x00ddf1ff",
+    "far_limit":10000,
+    "near_limit":5000
+  }
+}

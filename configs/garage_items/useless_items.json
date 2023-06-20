@@ -1,0 +1,30 @@
+{
+  "useless_items":
+  [
+    {
+      "id":20000,
+      "role_specific_item":"normal",
+      "description":
+      {
+        "name":"Test useless item",
+        "description":"Test useless_item description text"
+      },
+      "item_info":
+      {
+        "position":12,
+        "min_rank":1,
+        "max_rank":20,
+        "preview_image":"/garage/images/colors/green_preview"
+      },
+      "discount":
+      {
+        "discount":0,
+        "discount_image":"/garage/images/discounts/80"
+      },
+      "item_category":"emblem",
+      "price":50000,
+      "data_owner_id":17,
+      "class_name":"useless_item_class"
+    }
+  ]
+}

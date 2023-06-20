@@ -1,0 +1,72 @@
+
+
+class global_model:
+    def __init__(self, owner_id):
+        self.client_models = []
+        self.owner_id = owner_id
+        
+    def register_client_model(self, client_model):
+        self.client_models.append(client_model)
+        
+    def is_owner(self, user_id):
+        return self.get_owner_id() == user_id
+        
+    def get_owner_id(self):
+        return self.owner_id
+        
+    def get_client_models(self):
+        return self.client_models
+        
+    def proad_cast_command(self, command_name, args):
+        for client_model in self.client_models:
+            command = getattr(client_model.commands, command_name)
+            command(**args)
+
+
+class tank_global_model(global_model):
+
+    CLIENT_MODEL = tank_client_model
+
+    def __init__(self, owner_id=None):
+        super().__init__(owner_id)
+        
+        self.tank_state = tank_state()
+        
+    def get_model_data()
+        model_data = tank_model_cc()
+        model_data.tank_state = self.tank_state
+        model_data.tank_id = sdfojj3wijfskdpf
+        return model_data
+        
+    def handle_move_command(self, position, control_bit):
+        self.tank_state.position = position
+        self.tank_state.control_bit = control_bit
+        self.proad_cast_command("move_command", args=(position, control_bit))
+    
+
+class tank_model_command_handler:
+    def __init__(self, global_model):
+        self.global_model = global_model
+        
+    def handle_command(self, binary_data):
+        if binary_data.decode_command() == jotaki:
+            self.handle_move_command(binary_data)
+        
+    def handle_move_command(self, binary_data):
+        move_command = decode_some_shit(binary_data)
+        self.global_model.handle_move_command(move_command.position, move_command.control_bit)
+
+
+class tank_client_model:
+    def __init__(self, global_model):
+        self.global_model = global_model
+        self.global_model.register_client_model(self)
+        
+        self.command_handler = None
+        self.commands = tank_client_model_commands()
+        self.model_data = tank_model_data(global_model.get_model_data())
+        
+        if self.global_model.is_owner(client_id):
+            self.command_handler = tank_model_command_handler(global_model)
+        
+    

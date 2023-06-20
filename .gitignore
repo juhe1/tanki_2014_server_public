@@ -1,0 +1,9 @@
+__pycache__/
+*.bak
+run.bat
+mysql_run.bat
+run_sql.bat
+run_php_my_admin.bat
+client_resources/
+./models/
+notes/temp/
