@@ -1,3 +1,4 @@
+from database import database
 from global_models.battle_list.common.battle_select_global_model import battle_select_global_model
 from global_models.lobby.rank_notifier_global_model import rank_notifier_global_model
 from global_models.lobby.uid_notifier_global_model import uid_notifier_global_model
@@ -8,7 +9,6 @@ from loaders.map_loader import map_loader
 from space import global_space_registry
 from utils.log import console_out
 from loaders import json_loader
-from database import database
 import connection_handler
 import server_properties
 import game
