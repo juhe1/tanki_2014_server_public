@@ -1,4 +1,5 @@
 __pycache__/
+.venv/
 *.bak
 run.bat
 mysql_run.bat
