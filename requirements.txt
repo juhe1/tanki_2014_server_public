@@ -1,0 +1,9 @@
+mysql-connector-python==9.6.0
+panda3d==1.10.16
+termcolor==3.3.0
+colorama==0.4.6
+bitstring==4.4.0
+hexdump==3.3
+bcrypt==5.0.0
+rtree==1.4.1
+numpy==1.26.1
