@@ -8,3 +8,4 @@ run_php_my_admin.bat
 client_resources/
 ./models/
 notes/temp/
+log.txt
