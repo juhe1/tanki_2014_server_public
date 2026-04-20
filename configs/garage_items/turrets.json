@@ -669,42 +669,42 @@
             }
           ],
 
-					"bcsh":
-					[
-						{"brightness":0, "contrast":0, "saturation":0, "hue":0, "key":"def"}
-					],
+		  "bcsh":
+          [
+			{"brightness":0, "contrast":0, "saturation":0, "hue":0, "key":"def"}
+          ],
 
-					"shaft_sfx_data":
-					{
-						"explosion_sound":"/battle/sounds/turrets/shaft/m0/explosion",
-						"explosion_texture":"/battle/multiframe_image/turrets/shaft/m0/explosion",
-						"hit_mark_texture":"/battle/images/turrets/shaft/m0/explosion_mark",
-						"muzzle_flash_texture":"/battle/multiframe_image/turrets/shaft/m0/muzzle_flash",
-						"shot_sound":"/battle/sounds/turrets/shaft/m0/shot",
-						"targeting_sound":"/battle/sounds/turrets/shaft/m0/targeting",
-						"trail_texture":"/battle/images/turrets/shaft/m0/trail",
-						"zoom_mode_sound":"/battle/sounds/turrets/shaft/m0/scope"
-					},
+		  "shaft_sfx_data":
+		  {
+			"explosion_sound":"/battle/sounds/turrets/shaft/m0/explosion",
+			"explosion_texture":"/battle/multiframe_image/turrets/shaft/m0/explosion",
+			"hit_mark_texture":"/battle/images/turrets/shaft/m0/explosion_mark",
+			"muzzle_flash_texture":"/battle/multiframe_image/turrets/shaft/m0/muzzle_flash",
+			"shot_sound":"/battle/sounds/turrets/shaft/m0/shot",
+			"targeting_sound":"/battle/sounds/turrets/shaft/m0/targeting",
+			"trail_texture":"/battle/images/turrets/shaft/m0/trail",
+			"zoom_mode_sound":"/battle/sounds/turrets/shaft/m0/scope"
+		  },
 
-					"shaft_data":
-					{
-						"after_shot_pause":500,
-						"fast_shot_energy":1000,
-						"initial_fov":0.6981,
-						"minimum_fov":0.4014,
-						"jitter_angle_max":0.00698,
-						"jitter_angle_min":0,
-						"jitter_intencity_max":0.01,
-						"jitter_intencity_min":0,
-						"jitter_start_point":0,
-						"max_energy":1000,
-						"reticle_image":"/battle/images/turrets/shaft/m0/reticle",
-						"shrubs_hiding_radius_max":80,
-						"shrubs_hiding_radius_min":20,
-						"targeting_acceleration":0.47,
-						"targeting_transition_time":500,
-						"weakening_coeff":0.24
-					},
+		  "shaft_data":
+		  {
+			"after_shot_pause":500,
+			"fast_shot_energy":1000,
+			"initial_fov":0.6981,
+			"minimum_fov":0.4014,
+			"jitter_angle_max":0.00698,
+			"jitter_angle_min":0,
+			"jitter_intencity_max":0.01,
+			"jitter_intencity_min":0,
+			"jitter_start_point":0,
+			"max_energy":1000,
+			"reticle_image":"/battle/images/turrets/shaft/m0/reticle",
+			"shrubs_hiding_radius_max":80,
+			"shrubs_hiding_radius_min":20,
+			"targeting_acceleration":0.47,
+			"targeting_transition_time":500,
+			"weakening_coeff":0.24
+		  },
 
           "item_category":"weapon",
           "object_3ds":"/shared/tank_parts/3ds/turrets/shaft/m0",
@@ -2275,192 +2275,6 @@
           ]
         }
       ]
-    }.
-    {
-      "name":"Isida",
-      "modifications":
-      [
-        {
-          "id":730,
-
-          "description":
-          {
-            "name":"Isida",
-            "description":"Isida description text"
-          },
-
-          "item_info":
-          {
-            "position":0,
-            "min_rank":1,
-            "max_rank":20,
-            "preview_image":"/garage/images/turrets/isis/m0"
-          },
-
-          "discount":
-          {
-            "discount":0,
-            "discount_image":"/garage/images/discounts/80"
-          },
-
-          "modification":
-          {
-            "modification_index":0,
-            "base_item_id":700
-          },
-
-					"lighting": [
-						{
-							"name": "enemyStart",
-							"light": [
-								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00fde910", "intensity": 0, "time": 0 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.1, "time": 200 }
-							]
-						},
-						{
-							"name": "enemyLoop",
-							"light": [
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.3, "time": 0 },
-								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x00fde910", "intensity": 0.2, "time": 200 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.3, "time": 400 }
-							]
-						},
-						{
-							"name": "start",
-							"light": [
-								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x0041beeb", "intensity": 0, "time": 0 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x0041beeb", "intensity": 0.2, "time": 200 }
-							]
-						},
-						{
-							"name": "loop",
-							"light": [
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x0041beeb", "intensity": 0.3, "time": 0 },
-								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x0041beeb", "intensity": 0.2, "time": 200 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x0041beeb", "intensity": 0.3, "time": 400 }
-							]
-						},
-						{
-							"name": "friendStart",
-							"light": [
-								{ "attenuation_begin": 1, "attenuation_end": 2, "color": "0x00ffff", "intensity": 0, "time": 0 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00ffff", "intensity": 0.2, "time": 200 }
-							]
-						},
-						{
-							"name": "friendLoop",
-							"light": [
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.3, "time": 0 },
-								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x007df9ff", "intensity": 0.2, "time": 200 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.3, "time": 400 }
-							]
-						},
-						{
-							"name": "enemyBeam",
-							"light": [
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.2, "time": 0 },
-								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x00fde910", "intensity": 0.15, "time": 200 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x00fde910", "intensity": 0.2, "time": 400 }
-							]
-						},
-						{
-							"name": "friendBeam",
-							"light": [
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.2, "time": 0 },
-								{ "attenuation_begin": 100, "attenuation_end": 600, "color": "0x007df9ff", "intensity": 0.15, "time": 200 },
-								{ "attenuation_begin": 250, "attenuation_end": 700, "color": "0x007df9ff", "intensity": 0.2, "time": 400 }
-							]
-						}
-					],
-
-					"bcsh": 
-					[
-						{ "brightness": 0, "contrast": -1.77, "saturation": 0, "hue": 0, "key": "hss" },
-						{ "brightness": 0, "contrast": -1.77, "saturation": 0, "hue": 0, "key": "hs" },
-						{ "brightness": 22.566, "contrast": -2.655, "saturation": 0, "hue": 15.93, "key": "dss" },
-						{ "brightness": 22.566, "contrast": -2.655, "saturation": 0, "hue": 15.93, "key": "ds" }
-					],
-
-					"isis_sfx_data":
-					{
-						"damaging_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"damaging_sound":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"damaging_target_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"damaging_weapon_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"healing_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"healing_target_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"healing_weapon_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"idle_weapon_ball":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"damaging_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx",
-						"damaging_ray":"/battle/multiframe_image/turrets/isis/m0/xxxx"
-					},
-
-					"isis_data":
-					{
-						"healing_angle":0.7854,
-						"capacity":1000,
-						"weapon_tick_interval_msec":500,
-						"cone_angle":0.5236,
-						"discharge_rate":166,
-						"range":15
-					},
-
-          "item_category":"weapon",
-          "object_3ds":"/shared/tank_parts/3ds/turrets/isis/m0",
-          "price":3892,
-          "data_owner_id":2393004,
-
-          "properties":
-          [
-            {"final_value":1.51948364, "initial_value":1.51948364, "item_property":"turret_turn_speed", "upgradable_property":"turret_turn_speed"},
-            {"final_value":1, "initial_value":5, "item_property":"weapon_reload_time", "upgradable_property":"weapon_cooldown_time"},
-            {"final_value":500, "initial_value":20, "item_property":"damage_from", "upgradable_property":"damage"},
-            {"final_value":500, "initial_value":40, "item_property":"damage_to", "upgradable_property":"damage"},
-            {"final_value":10, "initial_value":5, "item_property":"turret_rotation_acceleration"}
-          ],
-
-          "upgradable_property_datas":
-          [
-            {
-              "id":0,
-              "cost":{"initial_number":200, "step":20},
-              "importance":1,
-              "level":0,
-              "max_level":10,
-              "property":"turret_turn_speed",
-              "speed_up_discount":1,
-              "time_discount":0,
-              "time_params":{"initial_number":1000, "step":5},
-              "upgrade_discount":1
-            },
-            {
-              "id":1,
-              "cost":{"initial_number":200, "step":20},
-              "importance":2,
-              "level":0,
-              "max_level":10,
-              "property":"damage",
-              "properties":["damage_from", "damage_to"],
-              "speed_up_discount":1,
-              "time_discount":0,
-              "time_params":{"initial_number":1000, "step":5},
-              "upgrade_discount":1
-            },
-            {
-              "id":2,
-              "cost":{"initial_number":200, "step":20},
-              "importance":3,
-              "level":0,
-              "max_level":10,
-              "property":"weapon_cooldown_time",
-              "speed_up_discount":1,
-              "time_discount":0,
-              "time_params":{"initial_number":1000, "step":5},
-              "upgrade_discount":1
-            }
-          ]
-        }
-			]
-		}
+    }
   ]
 }
