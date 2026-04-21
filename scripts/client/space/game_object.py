@@ -1,6 +1,7 @@
 from client.dispatcher.dispatcher_model import load_object_struct
 from client.dispatcher.dispatcher_model import dispatcher_model
 from client.dispatcher.dispatcher_model import model_data
+from loaders.server_properties_loader import server_properties_loader
 from utils.binary.codecs import basic_codecs
 from utils.log import console_out
 from utils import list_utils
@@ -75,7 +76,8 @@ class GameObject:
     def handle_command(self, binary_data):
         command_id = basic_codecs.LongCodec.decode(binary_data)
 
-        console_out.safe_print("recived command id: " + str(command_id))
+        if server_properties_loader.properties.debug_enabled and server_properties_loader.properties.print_packages_enabled:
+            console_out.safe_print("recived command id: " + str(command_id))
 
         for model in self.models.values():
             model_command_handler = model.command_handler

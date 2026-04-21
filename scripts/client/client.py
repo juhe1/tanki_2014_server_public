@@ -101,7 +101,8 @@ class Client:
             for binary_data in binary_datas:
                 # parse comman type from package
                 command_type = basic_codecs.ByteCodec.decode(binary_data)
-                console_out.safe_print("[MAIN] command_type: " + str(command_type))
+                if server_properties_loader.properties.debug_enabled and server_properties_loader.properties.print_packages_enabled:
+                    console_out.safe_print("[MAIN] command_type: " + str(command_type))
 
                 thread = threading.Thread(target=self.handle_basic_command.handle_command, args=(command_type, binary_data))
                 thread.start() # TODO: make better code that doesnt need thread

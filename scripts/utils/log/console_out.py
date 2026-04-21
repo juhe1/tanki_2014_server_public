@@ -54,6 +54,9 @@ def log_color_print(string,color, back=""):
     safe_print(colored(string, color, back))
 
 def print_server_package(buffer, name):
+    if not server_properties_loader.properties.debug_enabled or not server_properties_loader.properties.print_packages_enabled:
+        return
+        
     global is_free
     # write package to cmd
     color_print(name + ":", "green")
