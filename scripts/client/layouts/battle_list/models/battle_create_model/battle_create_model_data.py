@@ -20,6 +20,7 @@ class BattleCreateModelData:
             battle_limits.BattleLimits(server_properties_loader.properties.ctf_battle_limit["score_limit"], server_properties_loader.properties.ctf_battle_limit["time_limit_in_sec"]),
             battle_limits.BattleLimits(server_properties_loader.properties.cp_battle_limit["score_limit"], server_properties_loader.properties.cp_battle_limit["time_limit_in_sec"])
         ]
+
         self.battle_creation_disabled = False
         self.max_range_length = rank_ranges.get_range_by_rank_index(_user_property_model.model_data.rank)
 
