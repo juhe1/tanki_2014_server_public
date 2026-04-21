@@ -23,7 +23,7 @@ class BattleDmInfoGlobalModel(GlobalModel):
 
     def add_user(self, user_info, team):
         self.user_infos[user_info.user_id] = user_info
-        self.broadcast_command("add_user", (user_info,))
+        self.broadcast_command("add_user", (user_info, team))
 
     def remove_user(self, user_id):
         del self.user_infos[user_id]
