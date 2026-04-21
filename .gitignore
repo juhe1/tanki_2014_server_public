@@ -6,6 +6,9 @@ mysql_run.bat
 run_sql.bat
 run_php_my_admin.bat
 client_resources/
+dist/
+build/
 ./models/
 notes/temp/
 log.txt
+tanki_2014_server.exe
