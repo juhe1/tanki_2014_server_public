@@ -6,19 +6,20 @@ import mysql.connector
 connection_pool = None
 
 def database_exists():
-        connection = mysql.connector.connect(
-            host=server_properties_loader.properties.database_addres,
-            user=server_properties_loader.properties.database_user,
-            password=server_properties_loader.properties.database_password
-        )
-        cursor = connection.cursor()
+    connection = mysql.connector.connect(
+        host=server_properties_loader.properties.database_addres,
+        user=server_properties_loader.properties.database_user,
+        password=server_properties_loader.properties.database_password,
+        use_pure=True
+    )
+    cursor = connection.cursor()
 
-        try:
-                cursor.execute("SHOW DATABASES LIKE %s", (server_properties_loader.properties.database_name,))
-                return cursor.fetchone() is not None
-        finally:
-                cursor.close()
-                connection.close()
+    try:
+        cursor.execute("SHOW DATABASES LIKE %s", (server_properties_loader.properties.database_name,))
+        return cursor.fetchone() is not None
+    finally:
+        cursor.close()
+        connection.close()
 
 class Connection:
     def __init__(self, dictionary=False):
@@ -46,7 +47,8 @@ def connect_to_database():
         host=server_properties_loader.properties.database_addres,
         user=server_properties_loader.properties.database_user,
         password=server_properties_loader.properties.database_password,
-        database=server_properties_loader.properties.database_name
+        database=server_properties_loader.properties.database_name,
+        use_pure=True
     )
 
 def create_users_table(cursor):
@@ -151,7 +153,8 @@ def create_data_base():
     connection = mysql.connector.connect(
       host=server_properties_loader.properties.database_addres,
       user=server_properties_loader.properties.database_user,
-      password=server_properties_loader.properties.database_password
+      password=server_properties_loader.properties.database_password,
+      use_pure=True
     )
     cursor = connection.cursor()
 
