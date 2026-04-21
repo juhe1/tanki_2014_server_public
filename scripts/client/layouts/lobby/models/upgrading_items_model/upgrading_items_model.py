@@ -55,7 +55,7 @@ class UpgradingItemsModel(Model):
             garage_item = database_garage_item.garage_item
 
             # add panel_object to lobby space. add panel_model and user_property_model to panel_object
-            upgrading_item_game_object = self.client_space.add_game_object(game_object_name=name)
+            upgrading_item_game_object = self.client_space.add_game_object(game_object_name=str(garage_item.name) + "_upgrading_item")
             upgrading_item_game_object.add_model(data_owner_model.DataOwnerModel, model_args=(garage_item.data_owner_id,))
             upgrading_item_game_object.load_object_from_client()
 
