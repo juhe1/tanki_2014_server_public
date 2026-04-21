@@ -1,4 +1,4 @@
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 
 from mysql.connector import pooling
 import mysql.connector
@@ -24,11 +24,11 @@ def connect_to_database():
     # Create a connection pool
     connection_pool = mysql.connector.pooling.MySQLConnectionPool(
         pool_name="mypool",
-        pool_size=server_properties.DATABASE_CONNECTION_POOL_SIZE,
-        host=server_properties.DATABASE_ADDRES,
-        user=server_properties.DATABASE_USER,
-        password=server_properties.DATABASE_PASSWORD,
-        database=server_properties.DATABASE_NAME
+        pool_size=server_properties_loader.properties.database_connection_pool_size,
+        host=server_properties_loader.properties.database_addres,
+        user=server_properties_loader.properties.database_user,
+        password=server_properties_loader.properties.database_password,
+        database=server_properties_loader.properties.database_name
     )
 
 def create_users_table(cursor):
@@ -131,15 +131,15 @@ def create_battle_users_table(cursor):
 
 def create_data_base():
     connection = mysql.connector.connect(
-      host=server_properties.DATABASE_ADDRES,
-      user=server_properties.DATABASE_USER,
-      password=server_properties.DATABASE_PASSWORD
+      host=server_properties_loader.properties.database_addres,
+      user=server_properties_loader.properties.database_user,
+      password=server_properties_loader.properties.database_password
     )
     cursor = connection.cursor()
 
-    cursor.execute("CREATE DATABASE " + server_properties.DATABASE_NAME)
+    cursor.execute("CREATE DATABASE " + server_properties_loader.properties.database_name)
     connection.commit()
-    cursor.execute("USE " + server_properties.DATABASE_NAME)
+    cursor.execute("USE " + server_properties_loader.properties.database_name)
 
     create_users_table(cursor)
     create_user_properties_table(cursor)

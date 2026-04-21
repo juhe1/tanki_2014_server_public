@@ -1,15 +1,15 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.layouts.entrance.models.entrance_model import entrance_model
 from client.dispatcher.dispatcher_model import model_data
 from utils.binary.codecs import basic_codecs
 from utils.binary import binary_buffer
-import server_properties
 
 class EntranceModelData:
     def __init__(self, game_object, client_object):
         self.game_object = game_object
 
         self.anti_addiction_enabled = False
-        self.in_game_registration = server_properties.IN_GAME_REGISTRATION
+        self.in_game_registration = server_properties_loader.properties.in_game_registration
 
     def get_model_data(self):
         buffer = binary_buffer.BinaryBuffer()

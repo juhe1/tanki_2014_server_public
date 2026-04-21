@@ -3,7 +3,7 @@ from global_models.battle.common.battle_map_global_model import battle_map_globa
 from client.layouts.battle.models.bonus_common_model import bonus_common_model
 from loaders.map_loader.map_info import BonusType
 from space.global_model import GlobalModel
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 
 import random
 
@@ -22,22 +22,22 @@ class BonusCommonGlobalModel(GlobalModel):
 
     def get_life_time(self):
         if self.bonus_type == BonusType.ARMOR_BOX:
-            return server_properties.ARMOR_BOX_LIFE_TIME_IN_SEC
+            return server_properties_loader.properties.armor_box_life_time_in_sec
 
         if self.bonus_type == BonusType.CRYSTAL_BOX:
-            return server_properties.CRYSTAL_BOX_LIFE_TIME_IN_SEC
+            return server_properties_loader.properties.crystal_box_life_time_in_sec
 
         if self.bonus_type == BonusType.GOLD_BOX:
-            return server_properties.GOLD_BOX_LIFE_TIME_IN_SEC
+            return server_properties_loader.properties.gold_box_life_time_in_sec
 
         if self.bonus_type == BonusType.MED_BOX:
-            return server_properties.MED_BOX_LIFE_TIME_IN_SEC
+            return server_properties_loader.properties.med_box_life_time_in_sec
 
         if self.bonus_type == BonusType.NOS_BOX:
-            return server_properties.NOS_BOX_LIFE_TIME_IN_SEC
+            return server_properties_loader.properties.nos_box_life_time_in_sec
 
         if self.bonus_type == BonusType.POWER_BOX:
-            return server_properties.POWER_BOX_LIFE_TIME_IN_SEC
+            return server_properties_loader.properties.power_box_life_time_in_sec
 
     def get_bonus_regions(self, bonus_type):
         map_info = self.global_space.get_global_model(battle_map_global_model.BattleMapGlobalModel, global_game_object_name="battle_map").map_info

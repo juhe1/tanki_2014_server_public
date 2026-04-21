@@ -1,9 +1,9 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.layouts.entrance.models.login_model import login_model
 from utils.binary.codecs import basic_codecs
 from database import user_propertyes_table
 from database import garage_tables
 from database import users_table
-import server_properties
 
 import datetime
 import bcrypt
@@ -59,7 +59,7 @@ class RegistrationModelCommandHandler:
         users_table.create_new_user({"name":username, "password":hashed_pasword, "email":"", "reg_date":reg_date})
 
         user_id = users_table.get_atribute_by_username(username, "id")
-        user_propertyes = {"id":user_id, "crystals":server_properties.STARTING_CRYSTALS, "score":server_properties.STARTING_SCORE,
+        user_propertyes = {"id":user_id, "crystals":server_properties_loader.properties.starting_crystals, "score":server_properties_loader.properties.starting_score,
                            "last_visit":reg_date, "next_crystal_reward":reg_date, "user_roles":'[0]'}
 
         user_propertyes_table.create_new_user_property(user_propertyes)

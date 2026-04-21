@@ -1,3 +1,4 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.dispatcher.dispatcher_model import dispatcher_model
 from utils.binary.codecs import basic_codecs
 from space import global_space_registry
@@ -5,7 +6,6 @@ from utils.binary import binary_stream
 from utils.binary import binary_buffer
 from client.space import game_object
 from utils.log import console_out
-import server_properties
 
 import threading
 import weakref
@@ -199,7 +199,7 @@ class ClientSpace:
     def recive_commands(self):
         while True:
             try:
-                data = self.socket.recv(server_properties.RECEIVE_BUFFER_SIZE) # recive data from client
+                data = self.socket.recv(server_properties_loader.properties.receive_buffer_size) # recive data from client
             except:
                 return
 
@@ -207,7 +207,7 @@ class ClientSpace:
             if self.space_is_running_flag == False: return
 
             # write client package to screen
-            if server_properties.DEBUG_ENABLED:
+            if server_properties_loader.properties.debug_enabled:
                 console_out.print_command(data, self.name)
 
             binary_data = binary_stream.BinaryStream(data)

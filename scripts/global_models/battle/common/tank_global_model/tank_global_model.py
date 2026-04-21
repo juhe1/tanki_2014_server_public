@@ -18,7 +18,7 @@ from utils import own_math
 from . import tank_resources
 from . import tank_sounds
 from . import tank_state
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 from game import game
 from utils import panda_math
 
@@ -77,10 +77,10 @@ class TankGlobalModel(GlobalModel):
         self.double_power_effect_activated = False
         self.effect_duration_controller_global_models_by_index = {}
 
-        self.dead_timer = Timer(server_properties.TANK_DEAD_TIME_IN_MS / 1000)
+        self.dead_timer = Timer(server_properties_loader.properties.tank_dead_time_in_ms / 1000)
         self.dead_timer.set_done()
-        self.spawn_timer = Timer(server_properties.TANK_SPAWN_DELAY_IN_MS / 1000)
-        self.activation_timer = Timer(server_properties.TANK_ACTIVATION_DELAY_IN_MS / 1000)
+        self.spawn_timer = Timer(server_properties_loader.properties.tank_spawn_delay_in_ms / 1000)
+        self.activation_timer = Timer(server_properties_loader.properties.tank_activation_delay_in_ms / 1000)
         self.spawn_point = None
 
         self.effect_description_global_game_objects_by_index = {}
@@ -107,7 +107,7 @@ class TankGlobalModel(GlobalModel):
         self.broadcast_command("set_temperature", (temperature,))
 
     def create_tank_visualizer(self):
-        if not server_properties.DEBUG_ENABLED: return
+        if not server_properties_loader.properties.debug_enabled: return
         material = Material()
         material.set_diffuse((1, 0, 0, 1))
 
@@ -195,7 +195,7 @@ class TankGlobalModel(GlobalModel):
         if killer_tank_global_model != None:
             killer_id = killer_tank_global_model.owner_id
 
-        self.broadcast_command("kill", (reason, killer_id, server_properties.TANK_DEAD_TIME_IN_MS))
+        self.broadcast_command("kill", (reason, killer_id, server_properties_loader.properties.tank_dead_time_in_ms))
         self.battle_mines_global_model.remove_user_mines(self.global_game_object.id)
 
     def subtract_health(self, health):
@@ -247,7 +247,7 @@ class TankGlobalModel(GlobalModel):
 
         if self.logic_state.state == tank_state.LogicStateEnum.DEAD: return
 
-        if move_command.position.z <= server_properties.MIN_ALLOWED_Z and self.logic_state.state != tank_state.LogicStateEnum.DEAD:
+        if move_command.position.z <= server_properties_loader.properties.min_allowed_z and self.logic_state.state != tank_state.LogicStateEnum.DEAD:
             self.kill_tank(DeathReason.SUICIDE)
 
         # update state
@@ -259,7 +259,7 @@ class TankGlobalModel(GlobalModel):
 
         self.battle_mines_global_model.check_mine_hit(self)
 
-        if server_properties.DEBUG_ENABLED:
+        if server_properties_loader.properties.debug_enabled:
             self.visual_node.setPos(move_command.position.x, move_command.position.y, move_command.position.z)
             self.visual_node.setHpr(math.degrees(move_command.orientation.z), math.degrees(move_command.orientation.x), math.degrees(move_command.orientation.y))
 
@@ -293,7 +293,7 @@ class TankGlobalModel(GlobalModel):
         self.reset_supplies()
 
         incarnation_id = 1
-        spawn_timer = threading.Timer(server_properties.TANK_SPAWN_DELAY_IN_MS / 1000, self.spawn, args=(incarnation_id,))
+        spawn_timer = threading.Timer(server_properties_loader.properties.tank_spawn_delay_in_ms / 1000, self.spawn, args=(incarnation_id,))
         spawn_timer.start()
 
         self.broadcast_command("prepare_to_spawn", (self.spawn_point.position, self.spawn_point.rotation))
@@ -344,7 +344,7 @@ class TankGlobalModel(GlobalModel):
         if FIRST_AID_EFFECT_INDEX in self.effect_description_global_game_objects_by_index:
             return
 
-        effect_description_global_game_object = self.create_effect_description_game_object(index=FIRST_AID_EFFECT_INDEX, time_in_sec=server_properties.FIRST_AID_EFFECT_TIME_IN_SEC, effect_end_function=self.deactivate_first_aid)
+        effect_description_global_game_object = self.create_effect_description_game_object(index=FIRST_AID_EFFECT_INDEX, time_in_sec=server_properties_loader.properties.first_aid_effect_time_in_sec, effect_end_function=self.deactivate_first_aid)
 
         thread = threading.Thread(target=self.first_aid_heal_effect, args=(effect_description_global_game_object,))
         thread.start()
@@ -355,10 +355,10 @@ class TankGlobalModel(GlobalModel):
         max_health = self.tank_model_cc.max_health
 
         while self.health < max_health:
-            self.add_health(server_properties.FIRST_AID_HEAL_STEP_HP)
-            healed += server_properties.FIRST_AID_HEAL_STEP_HP
+            self.add_health(server_properties_loader.properties.first_aid_heal_step_hp)
+            healed += server_properties_loader.properties.first_aid_heal_step_hp
             if self.health > max_health and healed > max_health: break
-            time.sleep(server_properties.FIRST_AID_HEAL_STEPPING_SPEED_IN_SECONDS)
+            time.sleep(server_properties_loader.properties.first_aid_heal_stepping_speed_in_seconds)
 
         self.reset_effect(effect_description_global_game_object)
         self.first_aid_heal_effect_activated = False
@@ -369,10 +369,10 @@ class TankGlobalModel(GlobalModel):
 
     def activate_double_armor_effect(self):
         if DOUBLE_ARMOR_EFFECT_INDEX in self.effect_description_global_game_objects_by_index:
-            self.full_effect_timer(DOUBLE_ARMOR_EFFECT_INDEX, server_properties.DOUBLE_ARMOR_EFFECT_TIME_IN_SEC, self.deactivate_double_armor_effect)
+            self.full_effect_timer(DOUBLE_ARMOR_EFFECT_INDEX, server_properties_loader.properties.double_armor_effect_time_in_sec, self.deactivate_double_armor_effect)
             return
 
-        self.create_effect_description_game_object(index=DOUBLE_ARMOR_EFFECT_INDEX, time_in_sec=server_properties.DOUBLE_ARMOR_EFFECT_TIME_IN_SEC, effect_end_function=self.deactivate_double_armor_effect)
+        self.create_effect_description_game_object(index=DOUBLE_ARMOR_EFFECT_INDEX, time_in_sec=server_properties_loader.properties.double_armor_effect_time_in_sec, effect_end_function=self.deactivate_double_armor_effect)
         self.double_armor_effect_activated = True
 
     def deactivate_double_power_effect(self):
@@ -381,10 +381,10 @@ class TankGlobalModel(GlobalModel):
 
     def activate_double_power_effect(self):
         if DOUBLE_POWER_EFFECT_INDEX in self.effect_description_global_game_objects_by_index:
-            self.full_effect_timer(DOUBLE_POWER_EFFECT_INDEX, server_properties.DOUBLE_POWER_EFFECT_TIME_IN_SEC, self.deactivate_double_power_effect)
+            self.full_effect_timer(DOUBLE_POWER_EFFECT_INDEX, server_properties_loader.properties.double_power_effect_time_in_sec, self.deactivate_double_power_effect)
             return
 
-        self.create_effect_description_game_object(index=DOUBLE_POWER_EFFECT_INDEX, time_in_sec=server_properties.DOUBLE_POWER_EFFECT_TIME_IN_SEC, effect_end_function=self.deactivate_double_power_effect)
+        self.create_effect_description_game_object(index=DOUBLE_POWER_EFFECT_INDEX, time_in_sec=server_properties_loader.properties.double_power_effect_time_in_sec, effect_end_function=self.deactivate_double_power_effect)
         self.double_power_effect_activated = True
 
     def deactivate_nitro_effect(self):
@@ -393,12 +393,12 @@ class TankGlobalModel(GlobalModel):
 
     def activate_nitro_effect(self):
         if NITRO_EFFECT_INDEX in self.effect_description_global_game_objects_by_index:
-            self.full_effect_timer(NITRO_EFFECT_INDEX, server_properties.NITRO_EFFECT_TIME_IN_SEC, self.deactivate_nitro_effect)
+            self.full_effect_timer(NITRO_EFFECT_INDEX, server_properties_loader.properties.nitro_effect_time_in_sec, self.deactivate_nitro_effect)
             return
 
         self.nitro_effect_activated = True
-        self.create_effect_description_game_object(index=NITRO_EFFECT_INDEX, time_in_sec=server_properties.NITRO_EFFECT_TIME_IN_SEC, effect_end_function=self.deactivate_nitro_effect)
-        self.specification.set_tank_speed_with_factor(server_properties.NITRO_SPEED_COEFFICIENT)
+        self.create_effect_description_game_object(index=NITRO_EFFECT_INDEX, time_in_sec=server_properties_loader.properties.nitro_effect_time_in_sec, effect_end_function=self.deactivate_nitro_effect)
+        self.specification.set_tank_speed_with_factor(server_properties_loader.properties.nitro_speed_coefficient)
 
     def drop_mine(self):
         self.battle_mines_global_model.add_mine(self)
@@ -484,20 +484,20 @@ class Temperature:
             )
 
         while True:
-            time.sleep(server_properties.TEMPERATURE_UPDATE_DELAY)
-            _time += server_properties.TEMPERATURE_UPDATE_DELAY
+            time.sleep(server_properties_loader.properties.temperature_update_delay)
+            _time += server_properties_loader.properties.temperature_update_delay
 
             for _id, temperature_change_task in self.temperature_change_task_by_id.copy().items():
                 if temperature_change_task.temperature == 0:
                     self.temperature_change_task_by_id.pop(_id)
                     continue
 
-                subtract_temperature = temperature_change_task.temp_return_rate * server_properties.TEMPERATURE_UPDATE_DELAY
+                subtract_temperature = temperature_change_task.temp_return_rate * server_properties_loader.properties.temperature_update_delay
                 subtract_temperature = own_math.trim_subtract_value(temperature_change_task.temperature, subtract_temperature, 0)
 
                 self.temperature -= subtract_temperature
                 temperature_change_task.temperature -= subtract_temperature
-                self.tank_global_model.set_temperature(self.temperature * server_properties.TEMPERATURE_CHANGE_FACTOR)
+                self.tank_global_model.set_temperature(self.temperature * server_properties_loader.properties.temperature_change_factor)
 
                 if temperature_change_task.temperature > 0:
                     apply_burn_effect(temperature_change_task)

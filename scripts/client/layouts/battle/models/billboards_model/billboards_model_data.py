@@ -1,9 +1,9 @@
+from loaders.server_properties_loader import server_properties_loader
 from loaders.client_resource_loader import client_resource_loader
 from client.dispatcher.dispatcher_model import model_data
 from utils.binary.codecs import basic_codecs
 from utils.binary import binary_buffer
 from . import billboards_model
-import server_properties
 
 class BillboardsModelData:
     def __init__(self, game_object, billboards_model_cc):

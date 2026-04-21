@@ -1,10 +1,10 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.layouts.battle_list.models.pro_battle_info_model import pro_battle_info_model
 from client.layouts.garage.models.garage_model import garage_model
 from client.dispatcher.dispatcher_model import model_data
 from utils.binary.codecs import basic_codecs
 from utils.binary import binary_buffer
 from database import garage_tables
-import server_properties
 
 import datetime
 
@@ -12,7 +12,7 @@ class ProBattleInfoModelData:
     def __init__(self, game_object, client_object):
         self.game_object = game_object
 
-        self.pro_battle_enter_price = server_properties.PRO_BATTLE_ENTER_PRICE
+        self.pro_battle_enter_price = server_properties_loader.properties.pro_battle_enter_price
         self.battle_pass_time_left_in_sec = self.get_pro_pass_time_left(client_object)
 
     def get_pro_pass_time_left(self, client_object):

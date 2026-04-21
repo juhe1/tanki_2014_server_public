@@ -14,8 +14,8 @@ from database import battle_users_table
 from database import battles_table
 from . import statistics_model_cc
 from utils.time import timer
+from loaders.server_properties_loader import server_properties_loader
 
-import server_properties
 import threading
 import datetime
 
@@ -106,13 +106,13 @@ class StatisticsGlobalModel(GlobalModel):
 
     def add_kill(self, killer_user_info, killer_team, target_user_info):
         killer_user_info.kills += 1
-        killer_user_info.score += server_properties.KILL_SCORE
+        killer_user_info.score += server_properties_loader.properties.kill_score
         target_user_info.deaths += 1
 
         self.battle_mode_specifig_statistic_global_model.change_user_stats(killer_user_info, killer_team)
         self.battle_mode_specifig_statistic_global_model.change_user_stats(target_user_info, killer_team)
 
-        self.add_fund(server_properties.KILL_FUND)
+        self.add_fund(server_properties_loader.properties.kill_fund)
 
         score_limit = self.battle_info_model_cc.limits.score_limit
 
@@ -144,10 +144,10 @@ class StatisticsGlobalModel(GlobalModel):
         if self.battle_timer != None:
             self.battle_timer.destroy()
 
-        self.broadcast_command("round_finish", (server_properties.ROUND_END_SCREEN_TIME_IN_SEC, user_infos))
+        self.broadcast_command("round_finish", (server_properties_loader.properties.round_end_screen_time_in_sec, user_infos))
         self.battle_field_global_model.broadcast_command("battle_finish")
 
-        battle_start_timer = threading.Timer(server_properties.ROUND_END_SCREEN_TIME_IN_SEC, self.start_new_round)
+        battle_start_timer = threading.Timer(server_properties_loader.properties.round_end_screen_time_in_sec, self.start_new_round)
         battle_start_timer.start()
 
     def prepare_to_spawn_every_tank(self):

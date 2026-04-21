@@ -1,13 +1,13 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.layouts.lobby.models.lobby_layout_model import lobby_layout_model
 from client.dispatcher.dispatcher_model import model_data
 from utils.binary.codecs import basic_codecs
 from utils.binary import binary_buffer
-import server_properties
 
 class LobbyLayoutModelData:
     def __init__(self, game_object):
         self.game_object = game_object
-        self.disable_payment = server_properties.DISABLE_PAYMENT
+        self.disable_payment = server_properties_loader.properties.disable_payment
 
     def get_model_data(self):
         buffer = binary_buffer.BinaryBuffer()

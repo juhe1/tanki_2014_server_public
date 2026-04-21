@@ -1,3 +1,4 @@
+from loaders.server_properties_loader import server_properties_loader
 from global_models.battle.common.battle_field_global_model.battle_field_model_cc import BattleFieldModelCC
 from global_models.battle.bonus.bonus_postpone_global_model import bonus_postpone_global_model
 from global_models.battle.bonus.battle_field_bonus_global_model import battle_field_bonus_global_model
@@ -28,7 +29,6 @@ from database import battle_users_table
 from . import battle_field_sounds
 from . import placeholder_info
 from . import user_info
-import server_properties
 
 class BattleFieldGlobalModel(GlobalModel):
 
@@ -102,7 +102,7 @@ class BattleFieldGlobalModel(GlobalModel):
 
         self.add_kill_to_models(killer_user_info, target_user_info)
         self.add_kill_to_database(killer_user_info, target_user_info)
-        self.add_score_to_user_property(server_properties.KILL_SCORE, killer_id)
+        self.add_score_to_user_property(server_properties_loader.properties.kill_score, killer_id)
 
     def update_battle_field_global_space(self):
         for client_model in self.get_all_client_models():
@@ -292,12 +292,12 @@ class BattleFieldGlobalModel(GlobalModel):
         cc.battlefield_sounds = battle_field_sounds.BattleFieldSounds()
         cc.battlefield_sounds.battle_finish_sound = client_resource_loader.get_resource_id("/battle/sounds/battle_field/battle_end")
         cc.battlefield_sounds.kill_sound = client_resource_loader.get_resource_id("/battle/sounds/battle_field/kill")
-        cc.color_transform_multiplier = server_properties.COLOR_TRANSFORM_MULTIPLIER
-        cc.idle_kick_period_msec = server_properties.IDLE_KICK_PERIOD_MSEC
+        cc.color_transform_multiplier = server_properties_loader.properties.color_transform_multiplier
+        cc.idle_kick_period_msec = server_properties_loader.properties.idle_kick_period_msec
         cc.map_game_object_id = self.battle_map_global_game_object.id
         cc.range = range_data.Range(max=3, min=1) # TODO: find correct number (no idea what it is)
         cc.shadow_map_correction_factor = 0 # TODO: find correct number (no idea what it is)
-        cc.tank_activation_delay_in_ms = server_properties.TANK_ACTIVATION_DELAY_IN_MS
+        cc.tank_activation_delay_in_ms = server_properties_loader.properties.tank_activation_delay_in_ms
         return cc
 
     def get_model_data(self):

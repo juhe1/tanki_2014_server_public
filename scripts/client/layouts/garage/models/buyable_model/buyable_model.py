@@ -1,3 +1,4 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.layouts.garage.models.upgradeable_params_constructor_model import upgradeable_params_constructor_model
 from client.layouts.lobby.models.upgrading_items_model import upgrading_items_model
 from client.layouts.garage.models.countable_item_model import countable_item_model
@@ -10,7 +11,6 @@ from loaders.garage_item_loader import garage_item_loader
 from client.layouts.garage.garage_utils import name_to_id
 from client.space.model import Model
 from database import garage_tables
-import server_properties
 
 import datetime
 import math
@@ -125,7 +125,7 @@ class BuyableModel(Model):
         self.user_property_model.subtract_crystals(real_price)
 
     def calculate_speedup_cost(self, time, discount):
-        speed_up_coeff = server_properties.UPGRADE_SPEEDUP_COEFFICIENT
+        speed_up_coeff = server_properties_loader.properties.upgrade_speedup_coefficient
         speed_up_coeff = speed_up_coeff * math.log(10)
         time = time / 60
         price = time * (1 + speed_up_coeff / math.log(time + 10)) * 0.5

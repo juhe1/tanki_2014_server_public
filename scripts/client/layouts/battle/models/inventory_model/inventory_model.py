@@ -6,7 +6,6 @@ from client.layouts.battle.models.inventory_item_model import mine_inventory_ite
 from client.space import game_object
 from client.space.model import Model
 from database import garage_tables
-import server_properties
 
 class InventoryModel(Model):
     model_id = 300100052

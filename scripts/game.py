@@ -1,7 +1,7 @@
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 import sys
 
-if server_properties.DEBUG_ENABLED:
+if server_properties_loader.properties.debug_enabled:
     import direct.directbase.DirectStart
 
 from direct.showbase.DirectObject import DirectObject
@@ -117,7 +117,7 @@ class Game(DirectObject):
         global update_registry
         update_registry = UpdateRegistry()
 
-        if server_properties.DEBUG_ENABLED:
+        if server_properties_loader.properties.debug_enabled:
             taskMgr.add(update_registry.update, 'updateWorld')
 
             base.setBackgroundColor(*color.hex_color_to_rgb(0xe7feff))
@@ -185,7 +185,7 @@ class Game(DirectObject):
         self.line_node.reparentTo(render)
 
     def move_debug_line(self, pos, to):
-        if not server_properties.DEBUG_ENABLED: return
+        if not server_properties_loader.properties.debug_enabled: return
 
         self.line.moveTo(pos.x, pos.y, pos.z)
         self.line.drawTo(to.x, to.y, to.z)

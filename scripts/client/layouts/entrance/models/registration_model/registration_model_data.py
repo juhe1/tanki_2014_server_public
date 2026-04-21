@@ -1,18 +1,18 @@
+from loaders.server_properties_loader import server_properties_loader
 from client.layouts.entrance.models.registration_model import registration_model
 from loaders.client_resource_loader import client_resource_loader
 from client.dispatcher.dispatcher_model import model_data
 from utils.binary.codecs import basic_codecs
 from utils.binary import binary_buffer
-import server_properties
 
 class RegistrationModelData:
     def __init__(self, game_object, client_object):
         self.game_object = game_object
 
         self.background_resource = client_resource_loader.get_resource_id("/entrance/images/background")
-        self.enable_required_email = server_properties.ENABLE_REQUIRED_EMAIL
-        self.max_password_length = server_properties.MAX_PASSWORD_LENGTH
-        self.min_password_length = server_properties.MIN_PASSWORD_LENGTH
+        self.enable_required_email = server_properties_loader.properties.enable_required_email
+        self.max_password_length = server_properties_loader.properties.max_password_length
+        self.min_password_length = server_properties_loader.properties.min_password_length
 
     def get_model_data(self):
         buffer = binary_buffer.BinaryBuffer()

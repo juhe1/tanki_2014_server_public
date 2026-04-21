@@ -1,3 +1,4 @@
+from loaders.server_properties_loader import server_properties_loader
 from loaders.client_resource_loader import resource_types
 from client.dispatcher.codecs import dispatcher_codecs
 from utils.binary.codecs import basic_codecs
@@ -5,7 +6,6 @@ from space import global_space_registry
 from utils.binary import binary_buffer
 from utils.log import console_out
 from . import basic_command_types
-import server_properties
 
 # basic commands are commands that will be send with main socket(the socket that client will first connect)
 
@@ -43,10 +43,10 @@ class BasicCommands:
         buffer = binary_buffer.BinaryBuffer()
         basic_codecs.ByteCodec.encode(basic_command_types.SV_OPEN_SPACE, buffer)
         basic_codecs.LongCodec.encode(global_space.id, buffer)
-        basic_codecs.StringCodec.encode(server_properties.SPACE_IP, buffer)
-        basic_codecs.ByteCodec.encode(len([server_properties.NGROK_SPACE_PORTS]), buffer)
+        basic_codecs.StringCodec.encode(server_properties_loader.properties.space_ip, buffer)
+        basic_codecs.ByteCodec.encode(len([server_properties_loader.properties.ngrok_space_ports]), buffer)
 
-        for port in server_properties.NGROK_SPACE_PORTS:
+        for port in server_properties_loader.properties.ngrok_space_ports:
             basic_codecs.IntCodec.encode(port, buffer)
 
         basic_codecs.PackageCodec.encode(buffer)

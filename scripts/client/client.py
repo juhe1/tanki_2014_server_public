@@ -1,3 +1,4 @@
+from loaders.server_properties_loader import server_properties_loader
 from global_models.battle.common.battle_field_global_model import battle_field_global_model
 from client.layouts.garage.database import database_garage_item_loader
 from client.basic_commands import handle_basic_command
@@ -12,7 +13,6 @@ from utils.binary import binary_stream
 from database import garage_tables
 from utils.log import console_out
 import connection_handler
-import server_properties
 
 import threading
 import weakref
@@ -68,7 +68,7 @@ class Client:
     def recive_data(self, channel_id="CLIENT"):
         # recive data from client
         try:
-            data = self.main_socket.recv(server_properties.RECEIVE_BUFFER_SIZE)
+            data = self.main_socket.recv(server_properties_loader.properties.receive_buffer_size)
         except:
             return
 

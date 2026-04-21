@@ -12,7 +12,7 @@ from loaders.map_loader.map_info import BonusType
 from space.global_model import GlobalModel
 from . import battle_field_bonus_model_cc
 from utils.time.timer import Timer
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 
 import threading
 import datetime
@@ -43,7 +43,7 @@ class BattleFieldBonusGlobalModel(GlobalModel):
     def create_notification_game_objects(self):
         bonus_notification_cc = bonus_notification_model_cc.BonusNotificationModelCC()
         bonus_notification_cc.sound_notification = client_resource_loader.get_resource_id("/battle/sounds/gold")
-        bonus_notification_cc.notification_message = server_properties.GOLD_NOTIFICATION_MESSAGE
+        bonus_notification_cc.notification_message = server_properties_loader.properties.gold_notification_message
 
         gold_notification_global_game_object = self.global_space.add_global_game_object("gold_notification")
         self.gold_notification_global_model = gold_notification_global_game_object.add_global_model(bonus_notification_global_model.BonusNotificationGlobalModel, model_args=(bonus_notification_cc,))
@@ -109,7 +109,7 @@ class BattleFieldBonusGlobalModel(GlobalModel):
     # TODO: stop this loop when model is removed
     def spawn_supplie_boxes_loop(self):
         while True:
-            time.sleep(server_properties.SUPPLIE_BOX_SPAWN_TIME_IN_SEC)
+            time.sleep(server_properties_loader.properties.supplie_box_spawn_time_in_sec)
 
             random_supplie_bonus_global_model = self.bonus_common_global_model_by_bonus_type[self.get_random_supplie_bonus_type()]
             self.spawn_bonus(random_supplie_bonus_global_model)
@@ -139,7 +139,7 @@ class BattleFieldBonusGlobalModel(GlobalModel):
             self.gold_taken(user_id)
 
         if bonus_type == BonusType.CRYSTAL_BOX:
-            self.add_crystals_to_user_id(user_id, server_properties.CRYSTAL_BOX_REWARD)
+            self.add_crystals_to_user_id(user_id, server_properties_loader.properties.crystal_box_reward)
 
         self.remove_bonus_from_server(bonus_id)
         self.broadcast_command("bonus_taken", (bonus_id,))
@@ -155,31 +155,31 @@ class BattleFieldBonusGlobalModel(GlobalModel):
 
     def gold_taken(self, user_id):
         self.broadcast_command("gold_taken", (user_id,))
-        self.add_crystals_to_user_id(user_id, server_properties.GOLD_BOX_REWARD)
+        self.add_crystals_to_user_id(user_id, server_properties_loader.properties.gold_box_reward)
     
     def spawn_gold(self):
         bonus_common_model = self.bonus_common_global_model_by_bonus_type[BonusType.GOLD_BOX]
         self.spawn_bonus(bonus_common_model)
 
     def try_drop_gold(self):
-        random_number = random.randint(1, server_properties.GOLD_BOX_DROP_PROBABILITY)
+        random_number = random.randint(1, server_properties_loader.properties.gold_box_drop_probability)
         if random_number != 1: return
         
         self.gold_notification_global_model.send_notification()
 
-        timer = threading.Timer(server_properties.GOLD_DROP_TIME, self.spawn_gold)
+        timer = threading.Timer(server_properties_loader.properties.gold_drop_time, self.spawn_gold)
         timer.start()
 
     def try_drop_crystal_box(self):
         self.num_fund_changes_from_last_crystal_drop += 1
 
-        if self.num_fund_changes_from_last_crystal_drop >= server_properties.NUM_FUND_CHANGES_FOR_CRYSTAL_DROP:
+        if self.num_fund_changes_from_last_crystal_drop >= server_properties_loader.properties.num_fund_changes_for_crystal_drop:
             bonus_common_model = self.bonus_common_global_model_by_bonus_type[BonusType.CRYSTAL_BOX]
             self.spawn_bonus(bonus_common_model)
 
     def create_cc(self):
         _battle_field_bonus_model_cc = battle_field_bonus_model_cc.BattleFieldBonusModelCC()
-        _battle_field_bonus_model_cc.bonus_fall_speed = server_properties.BONUS_FALL_SPEED
+        _battle_field_bonus_model_cc.bonus_fall_speed = server_properties_loader.properties.bonus_fall_speed
         return _battle_field_bonus_model_cc
 
     def get_model_data(self):

@@ -1,9 +1,9 @@
+from loaders.server_properties_loader import server_properties_loader
 from utils.binary.codecs import basic_codecs
 from space import global_space_registry
 from utils.binary import binary_stream
 from utils.log import console_out
 from client import client
-import server_properties
 
 import threading
 import secrets
@@ -18,23 +18,23 @@ def init():
     create_space_connection_handlers()
 
 def create_main_connection_handlers():
-    for port in server_properties.PORTS:
+    for port in server_properties_loader.properties.ports:
         # create main socket
         main_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         main_socket.settimeout(None)
-        main_socket.bind((server_properties.IP, port))
-        main_socket.listen(server_properties.MAX_PLAYER_COUNT)
+        main_socket.bind((server_properties_loader.properties.ip, port))
+        main_socket.listen(server_properties_loader.properties.max_player_count)
 
         # create thread for handle_main_connections
         thread = threading.Thread(target=handle_main_connections, args=(main_socket,))
         thread.start()
 
 def create_space_connection_handlers():
-    for port in server_properties.SPACE_PORTS:
+    for port in server_properties_loader.properties.space_ports:
         # create space socket
         space_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        space_socket.bind((server_properties.IP, port))
-        space_socket.listen(server_properties.MAX_PLAYER_COUNT * 4)
+        space_socket.bind((server_properties_loader.properties.ip, port))
+        space_socket.listen(server_properties_loader.properties.max_player_count * 4)
 
         # create thread for handle_space_connections
         thread = threading.Thread(target=handle_space_connections, args=(space_socket,))
@@ -50,7 +50,7 @@ def recive_hash(socket):
     while True:
 
         try:
-            package = socket.recv(server_properties.RECEIVE_BUFFER_SIZE) # recive data from client
+            package = socket.recv(server_properties_loader.properties.receive_buffer_size) # recive data from client
         except:
             return
 

@@ -3,7 +3,6 @@ from client.layouts.battle.models.statistics_model import statistics_model
 from . import statistics_dm_model_commands
 from . import statistics_dm_model_data
 from client.space.model import Model
-import server_properties
 
 class StatisticsDmModel(Model):
     model_id = 300080031

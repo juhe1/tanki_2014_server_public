@@ -2,7 +2,6 @@ from client.dispatcher.dispatcher_model import model_data
 from utils.binary.codecs import basic_codecs
 from utils.binary import binary_buffer
 from . import inventory_item_model
-import server_properties
 
 class InventoryItemModelData:
     def __init__(self, count, index, cool_down_time_in_sec, battle_game_object_id):

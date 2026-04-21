@@ -1,8 +1,8 @@
+from loaders.server_properties_loader import server_properties_loader
 from space import global_space_registry
 from space import global_game_object
 from utils.log import console_out
 import connection_handler
-import server_properties
 import threading
 import socket
 
@@ -11,7 +11,7 @@ class GlobalSpace:
         self.id = id
         self.name = name
 
-        self.current_global_game_object_id = server_properties.GLOBAL_GAME_OBJECT_ID_OFFSET # we are using offset, because we dont want that client_game_object and global_game_object ids collide
+        self.current_global_game_object_id = server_properties_loader.properties.global_game_object_id_offset # we are using offset, because we dont want that client_game_object and global_game_object ids collide
         self.connecting_clients = [] # clients that are trying to connect to space # TODO: delete connecting client if the client disconnects
         self.client_spaces = []
 

@@ -1,3 +1,7 @@
+import server_properties
+from loaders.server_properties_loader import server_properties_loader
+server_properties_loader.init(server_properties.CONFIG_DIRECTORY + "server_properties.json")
+
 from database import database
 from global_models.battle_list.common.battle_select_global_model import battle_select_global_model
 from global_models.lobby.rank_notifier_global_model import rank_notifier_global_model
@@ -10,7 +14,6 @@ from space import global_space_registry
 from utils.log import console_out
 from loaders import json_loader
 import connection_handler
-import server_properties
 import game
 
 def main():

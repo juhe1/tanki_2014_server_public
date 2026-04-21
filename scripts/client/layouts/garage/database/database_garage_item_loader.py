@@ -1,7 +1,7 @@
 from client.layouts.garage.database import database_garage_item
 from loaders.garage_item_loader import garage_item_loader
 from database import garage_tables
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 
 class DatabaseGarageItemLoader:
     def __init__(self):
@@ -17,7 +17,7 @@ class DatabaseGarageItemLoader:
             self.create_starting_items(user_id)
 
     def create_starting_items(self, user_id):
-        for item_id in server_properties.STARTING_ITEM_IDS:
+        for item_id in server_properties_loader.properties.starting_item_ids:
             garage_item = garage_item_loader.get_item_by_id(item_id)
             database_garage_item = self.create_new_database_garage_item(garage_item)
             database_garage_item.count = 1

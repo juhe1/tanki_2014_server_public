@@ -8,7 +8,7 @@ from panda3d.core import Vec3
 from utils.collision import _3d_utils
 from space.global_model import GlobalModel
 from . import battle_mines_model_cc
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 from utils import panda_math
 from game import game
 
@@ -63,7 +63,7 @@ class BattleMinesGlobalModel(GlobalModel):
 
     def calculate_mine_position(self, mine_adder_position):
         mine_adder_position += Vec3(0, 0, 100)
-        mine_offset = Vec3(0, 0, server_properties.MINE_OFFSET_FROM_GROUND)
+        mine_offset = Vec3(0, 0, server_properties_loader.properties.mine_offset_from_ground)
 
         ray_result = self.map_collision_geometry.physics_world.rayTestClosest(mine_adder_position, mine_adder_position + Vec3(0,0,-4000))
 
@@ -95,7 +95,7 @@ class BattleMinesGlobalModel(GlobalModel):
         self.mines_by_user_id[mine.owner_id].append(mine)
         self.mine_rtree.add_mine(mine)
 
-        timer = threading.Timer(server_properties.MINE_ACTIVATE_TIME_MS/1000, self.activate_mine, args=(mine,))
+        timer = threading.Timer(server_properties_loader.properties.mine_activate_time_ms/1000, self.activate_mine, args=(mine,))
         timer.start()
 
     def explode_mine(self, mine, tank_global_model):

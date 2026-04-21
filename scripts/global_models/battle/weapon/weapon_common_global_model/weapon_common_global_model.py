@@ -12,7 +12,7 @@ from global_models.battle.common.tank_global_model import tank_global_model
 from global_models.battle.weapon.weapon_weakening_global_model import weapon_weakening_global_model
 from space.global_model import GlobalModel
 from . import weapon_common_model_cc
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 
 class WeaponCommonGlobalModel(GlobalModel):
 
@@ -43,7 +43,7 @@ class WeaponCommonGlobalModel(GlobalModel):
         target_real_position = target_tank_global_model.tank_state.position
 
         # return, if target real position and the position that we get from client is too different
-        if (target_real_position - target_pos).length() > server_properties.MAXIMUM_ALLOWED_TANK_POSITION_DIFFERENCE:
+        if (target_real_position - target_pos).length() > server_properties_loader.properties.maximum_allowed_tank_position_difference:
             return False
 
         return True

@@ -1,3 +1,4 @@
+from loaders.server_properties_loader import server_properties_loader
 from global_models.battle.common.battle_field_global_model import battle_field_global_model
 from . import user_property_model_commands
 from database import user_propertyes_table
@@ -6,7 +7,6 @@ from . import user_property_model_data
 from client.space.model import Model
 from database import garage_tables
 from client import ranks
-import server_properties
 
 class UserPropertyModel(Model):
     model_id = 300050071
@@ -31,7 +31,7 @@ class UserPropertyModel(Model):
         self.check_for_rank_up(score)
 
         # update database and user_data every 50 score
-        if self.score_buffer >= server_properties.SCORE_SAVE_INTERVAL:
+        if self.score_buffer >= server_properties_loader.properties.score_save_interval:
             self.save_score_buffer()
 
     def add_score(self, score):

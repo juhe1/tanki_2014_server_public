@@ -3,7 +3,7 @@ from global_models.battle.common.tank_global_model.team import Team
 from space.global_model import GlobalModel
 from . import team_kick_model_cc
 from . import user_team_kick_data
-import server_properties
+from loaders.server_properties_loader import server_properties_loader
 
 class TeamKickGlobalModel(GlobalModel):
 
@@ -78,9 +78,9 @@ class TeamKickGlobalModel(GlobalModel):
     def create_cc(self):
         cc = team_kick_model_cc.TeamKickModelCC()
         cc.disabled = False
-        cc.duration_immunity_affter_enter_in_sec = server_properties.TEAM_KICK_DURATION_IMMUNITY_AFFTER_ENTER_IN_SEC
+        cc.duration_immunity_affter_enter_in_sec = server_properties_loader.properties.team_kick_duration_immunity_affter_enter_in_sec
         cc.enter_time_diff_in_sec = 0
-        cc.immunity_stay_in_battle_in_sec = server_properties.TEAM_KICK_IMMUNITY_STAY_IN_BATTLE_IN_SEC
+        cc.immunity_stay_in_battle_in_sec = server_properties_loader.properties.team_kick_immunity_stay_in_battle_in_sec
         return cc
 
     def get_model_data(self, user_id):

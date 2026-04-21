@@ -1,6 +1,6 @@
+from loaders.server_properties_loader import server_properties_loader
 from utils.log import logger
 from termcolor import colored
-import server_properties
 
 import time
 import colorama
@@ -61,13 +61,13 @@ def print_server_package(buffer, name):
     hexdump(buffer.get_binary_data(), buffer.get_types())
 
 def print_package(data):
-    if server_properties.DEBUG_ENABLED and server_properties.PRINT_PACKAGES_ENABLED:
+    if server_properties_loader.properties.debug_enabled and server_properties_loader.properties.print_packages_enabled:
         # write client package to console
         console_out.color_print("RECIVED FROM " + channel_id + ":", "green")
         console_out.hexdump(data)
 
 def hexdump(_bytes, types=[]):
-    if server_properties.DISABLE_HEX_DUMP or not server_properties.DEBUG_ENABLED: return
+    if server_properties_loader.properties.disable_hex_dump or not server_properties_loader.properties.debug_enabled: return
     hex_string = _bytes.hex()
     string = ""
     for byte in _bytes:
